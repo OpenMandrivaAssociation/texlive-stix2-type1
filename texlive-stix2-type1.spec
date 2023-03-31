@@ -1,6 +1,6 @@
 Name:		texlive-stix2-type1
 Version:	57448
-Release:	1
+Release:	2
 Summary:	Type1 versions of the STIX Two OpenType fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/stix2-type1
