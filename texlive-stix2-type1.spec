@@ -3,7 +3,7 @@ Version:	57448
 Release:	2
 Summary:	Type1 versions of the STIX Two OpenType fonts
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/stix2-type1
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/stix2-type1
 License:	ofl lppl1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/stix2-type1.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/stix2-type1.doc.r%{version}.tar.xz
