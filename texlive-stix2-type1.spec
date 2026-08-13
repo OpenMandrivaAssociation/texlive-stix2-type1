@@ -1,9 +1,10 @@
 %global tl_name stix2-type1
 %global tl_revision 79618
+%global tl_version 2.0.2
 
 Name:		texlive-%{tl_name}
 Epoch:		1
-Version:	2.0.2
+Version:	%{tl_version}
 Release:	%{tl_revision}.1
 Summary:	Type1 versions of the STIX Two OpenType fonts
 Group:		Publishing
@@ -14,7 +15,8 @@ Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/stix2-type1.doc.
 Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/stix2-type1.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 The stix2 package provides minimal support for using the STIX Two fonts
@@ -31,3 +33,10 @@ OpenType and Type 1 versions. In addition, while development of the
 OpenType versions is ongoing, no further updates are planned to the Type
 1 versions of the fonts.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from stix2-type1:
+Map stix2.map
+TL_DROPIN_EOF
